@@ -1,5 +1,5 @@
 public class CyclesTheme {
-    public static void main(String[] args) {
+    public static void main(String[] args) {/*
         System.out.println("1. Подсчет суммы четных и нечетных чисел\n");
         int counter = -10;
         int sumEvenNum = 0;
@@ -20,10 +20,10 @@ public class CyclesTheme {
         int num2 = 5;
         int num3 = -1;
 
-        int max1 = num1 > num2 ? num1 : num2;
-        int max = max1 > num3 ? max1 : num3; 
-        int min1 = num1 < num2 ? num1 : num2; 
-        int min = min1 < num3 ? min1 : num3; 
+        int max = num1 > num2 ? num1 : num2;
+        max = max > num3 ? max : num3; 
+        int min = num1 < num2 ? num1 : num2; 
+        min = min < num3 ? min : num3; 
 
         System.out.println("\nЧисло максимальное: " + max + "; Число наименьшее: " + min);
         System.out.println("\nВыводим все числа в интервале (" + min + ", " + max + ") в порядке убывания: ");
@@ -45,29 +45,28 @@ public class CyclesTheme {
 
         System.out.println("\n4. Вывод чисел на консоль в несколько строк\n");
         int endRange = 24;
-        int digTransition = 9;
+        int digitTransition = 9;
         for (int i = 1; i <= endRange ; i += 2) {
             System.out.printf("%5d", i);
-            if ((i % 10) == digTransition) {
+            if ((i % 10) == digitTransition) {
                 System.out.println();
             }
         }
 
         endRange %= 10;
-        int saveCounter = digTransition;
+        int saveCounter = digitTransition;
         if (endRange > 0) {
               saveCounter = endRange; 
         }
 
-        int dig0 = 0;
-        for (; saveCounter < digTransition; saveCounter += 2) {
-            System.out.printf("%5d", dig0);
+        for (; saveCounter < digitTransition; saveCounter += 2) {
+            System.out.printf("%5d", 0);
         }
 
         System.out.println("\n\n5. Проверка количества двоек на четность/нечетность\n");
         int num = 3242592;
         int countTwos = 0;
-        int saveNum = num;
+        int copyNum = num;
 
         while (num != 0) {
             int digit = num % 10;
@@ -78,13 +77,13 @@ public class CyclesTheme {
         }
 
         if (countTwos % 2 == 0) {
-                System.out.println("число " + saveNum + " содержит четное количество двоек = " + 
-                        countTwos);
+            System.out.println("число " + copyNum + " содержит четное количество двоек = " + 
+                    countTwos);
         } else {
-                System.out.println("число " + saveNum + " содержит нечетное количество двоек = " + 
-                        countTwos);
+            System.out.println("число " + copyNum + " содержит нечетное количество двоек = " + 
+                    countTwos);
         }
-
+*/
         System.out.println("\n6. Отображение фигур в консоли\n");
         System.out.println("используя только цикл for\n");
         for (int i = 1; i <= 50; i++) {
@@ -95,35 +94,40 @@ public class CyclesTheme {
         }
 
         System.out.println("\nиспользуя только цикл while\n");
-        int externalReplay = 5;
-        while (externalReplay >= 1) {
-            int internalReplay = 1;
+        int numLines = 5;
+        while (numLines >= 1) {
+            int numCharString = 1;
 
-            while (internalReplay <= externalReplay) {
+            while (numCharString <= numLines) {
                 System.out.print("#");
-                internalReplay++;
+                numCharString++;
             }
             System.out.println();
-            externalReplay--;
+            numLines--;
         }
 
         System.out.println("\nиспользуя только цикл do while\n");
-        int counter1 = 1;
-        int counter2 = counter1;
+        numLines = 1;
+        int numCharString = 1;
+        int counterLines = 2;
+
         do {
-            System.out.println("$");
             do {
                 System.out.print("$");
-                counter2++;
-
-                if (counter2 == 3) {
-                    System.out.print("$");
+                numCharString++;
+                if (numCharString == counterLines) {
+                    if (counterLines == 2 || counterLines >= 7) {
+                        counterLines += 2;
+                        System.out.println();
+                    } else if (counterLines == 4) {
+                        counterLines += 3;
+                        System.out.println();
+                    }
                 }
-
-            } while (counter2 <= 1);
-            counter1++;
-        } while (counter1 <= 4);
-
+            } while (numCharString <= 9);
+            numLines++;
+        } while (numLines <= 1);
+/*
         System.out.println("\n\n7. Отображение ASCII-символов\n");
         for (int i = 1; i <= 1; i++){
             System.out.println("Dec " + "Char");
@@ -224,7 +228,7 @@ public class CyclesTheme {
                 System.out.printf("%3d", calcTable);
             }
             System.out.println();
-        }
+        }*/
 
     }
 }
