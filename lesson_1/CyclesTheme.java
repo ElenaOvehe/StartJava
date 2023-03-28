@@ -1,5 +1,5 @@
 public class CyclesTheme {
-    public static void main(String[] args) {/*
+    public static void main(String[] args) {
         System.out.println("1. Подсчет суммы четных и нечетных чисел\n");
         int counter = -10;
         int sumEvenNum = 0;
@@ -83,7 +83,7 @@ public class CyclesTheme {
             System.out.println("число " + copyNum + " содержит нечетное количество двоек = " + 
                     countTwos);
         }
-*/
+
         System.out.println("\n6. Отображение фигур в консоли\n");
         System.out.println("используя только цикл for\n");
         for (int i = 1; i <= 50; i++) {
@@ -127,7 +127,7 @@ public class CyclesTheme {
             } while (numCharString <= 9);
             numLines++;
         } while (numLines <= 1);
-/*
+
         System.out.println("\n\n7. Отображение ASCII-символов\n");
         for (int i = 1; i <= 1; i++){
             System.out.println("Dec " + "Char");
@@ -228,7 +228,7 @@ public class CyclesTheme {
                 System.out.printf("%3d", calcTable);
             }
             System.out.println();
-        }*/
+        }
 
     }
 }
