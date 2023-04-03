@@ -32,19 +32,21 @@ public class Calculator {
         int numUser = 27;
         int numMin = 1;
         int numMax = 100;
+
+
         for (numMin = 1; numMin <= numMax; numMin++) {
-        if (numUser == numComputer) {
+            if (numUser == numComputer) {
                 System.out.println("Вы победили!");
-                return;
-        } else {
-            if (numUser < numComputer) {
-                System.out.println("число " + numUser + " меньше того, что загадал компьютер");
-                numUser++;
+                break;
             } else {
-                System.out.println("число " + numUser + " больше того, что загадал компьютер");
-                numUser--;
+                if (numUser < numComputer) {
+                    System.out.println("число " + numUser + " меньше того, что загадал компьютер");
+                    numUser+=5;
+                } else {
+                    System.out.println("число " + numUser + " больше того, что загадал компьютер");
+                    numUser-=3;
+                }
             }
-        }
         }
 
     }
